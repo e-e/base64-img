@@ -12,14 +12,20 @@ npm install base64-img --save
 mocha
 ```
 ## API
-### .base64(filename, callback)
+Note: All methods which take a callback, if omitted, will return a promise
+### .base64(filename[, callback])
 Convert image file to image base64 data
 * {string} ``filename`` required  
 The image path
-* {function} ``callback(err, data)`` required  
+* {function} ``callback(err, data)`` optional  
 Callback with image base64 data
 ```js
 base64Img.base64('path/demo.png', function(err, data) {})
+
+/* promise */
+base64Img.base64('path/demo.png').then(function(data) {
+
+})
 ```
 
 ### .base64Sync(filename)
@@ -28,18 +34,24 @@ The api same as base64, but it's synchronous
 var data = base64Img.base64Sync('path/demo.png');
 ```
 
-### .requestBase64(url, callback)
+### .requestBase64(url[, callback])
 * {string} ``url`` required
-* {function} ``callback(err, res, body)`` required  
+* {function} ``callback(err, res, body)`` optional  
 Callback with http request
 ```js
 var url = 'http://../demo.png';
-base64Img.requestBase64(url, function(err, res, body) {
+base64Img.requestBase64(url, function(err, res, data) {
   
+});
+
+/* promise */
+var url = 'http://../demo.png';
+base64Img.requestBase64(url).then(function({res, data}) {
+
 });
 ```
 
-### .img(data, destpath, name, callback)
+### .img(data, destpath, name[, callback])
 Convert image base64 data to image
 * {string} ``data`` required  
 Image base64 data
@@ -47,9 +59,14 @@ Image base64 data
 Dest path, if the destpath is root, pass empty string
 * {string} ``name`` required  
 The image's filename
-* {function} ``callback(err, filepath)`` required
+* {function} ``callback(err, filepath)`` optional
 ```js
 base64Img.img('data:image/png;base64,...', 'dest', '1', function(err, filepath) {});
+
+/* promise */
+base64Img.img('data:image/png;base64,...', 'dest', '1').then(function(filepath) {
+  
+});
 ```
 
 ### .imgSync(data, destpath, name)
