@@ -1,27 +1,24 @@
 {
-  "name": "base64-img",
-  "version": "1.0.3",
-  "description": "Convert img to base64, or convert base64 to img",
+  "name": "base64-img-promise",
+  "version": "1.0.4",
+  "description":
+    "Convert img to base64, or convert base64 to img, with the option of using promises",
   "main": "base64-img.js",
   "scripts": {
     "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/douzi8/base64-img.git"
+    "url": "https://github.com/e-e/base64-img-promise.git"
   },
-  "keywords": [
-    "base64",
-    "img",
-    "image",
-    "img base64"
-  ],
-  "author": "douzi <liaowei08@gmail.com>",
+  "keywords": ["base64", "img", "image", "img base64", "promise"],
+  "author": "Eric Ellingson <ellingsonster@gmail.com>",
+  "original_author": "douzi <liaowei08@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/douzi8/base64-img/issues"
+    "url": "https://github.com/e-e/base64-img-promise/issues"
   },
-  "homepage": "https://github.com/douzi8/base64-img",
+  "homepage": "https://github.com/e-e/base64-img-promise",
   "dependencies": {
     "ajax-request": "^1.2.0",
     "file-system": "^2.1.0"
