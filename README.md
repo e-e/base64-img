@@ -32,10 +32,11 @@ Convert image file to image base64 data
   Callback with image base64 data
 
 ```js
-base64Img.base64('path/demo.png', function(err, data) {});
-
 /* promise */
 base64Img.base64('path/demo.png').then(function(data) {});
+
+/* callback */
+base64Img.base64('path/demo.png', function(err, data) {});
 ```
 
 ### .base64Sync(filename)
@@ -53,12 +54,12 @@ var data = base64Img.base64Sync('path/demo.png');
   Callback with http request
 
 ```js
-var url = 'http://../demo.png';
-base64Img.requestBase64(url, function(err, res, data) {});
-
 /* promise */
 var url = 'http://../demo.png';
 base64Img.requestBase64(url).then(function({ res, data }) {});
+
+var url = 'http://../demo.png';
+base64Img.requestBase64(url, function(err, res, data) {});
 ```
 
 ### .img(data, destpath, name[, callback])
@@ -74,15 +75,15 @@ Convert image base64 data to image
 * {function} `callback(err, filepath)` optional
 
 ```js
-base64Img.img('data:image/png;base64,...', 'dest', '1', function(
-  err,
-  filepath
-) {});
-
 /* promise */
 base64Img
   .img('data:image/png;base64,...', 'dest', '1')
   .then(function(filepath) {});
+
+base64Img.img('data:image/png;base64,...', 'dest', '1', function(
+  err,
+  filepath
+) {});
 ```
 
 ### .imgSync(data, destpath, name)
