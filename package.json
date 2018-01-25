@@ -1,8 +1,7 @@
 {
   "name": "base64-img-promise",
-  "version": "1.0.4",
-  "description":
-    "Convert img to base64, or convert base64 to img, with the option of using promises",
+  "version": "1.0.5",
+  "description": "Convert img to base64, or convert base64 to img, with the option of using promises",
   "main": "base64-img.js",
   "scripts": {
     "test": "mocha"
@@ -11,7 +10,13 @@
     "type": "git",
     "url": "https://github.com/e-e/base64-img-promise.git"
   },
-  "keywords": ["base64", "img", "image", "img base64", "promise"],
+  "keywords": [
+    "base64",
+    "img",
+    "image",
+    "img base64",
+    "promise"
+  ],
   "author": "Eric Ellingson <ellingsonster@gmail.com>",
   "original_author": "douzi <liaowei08@gmail.com>",
   "license": "ISC",
